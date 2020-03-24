@@ -25,7 +25,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.google.gson.Gson;
-import com.kid.chinese.fix.FixApplication;
 import com.kid.chinese.model.FuturesMessage;
 import com.kid.chinese.service.IFuturesMessageService;
 import com.kid.chinese.util.CodeUtil;

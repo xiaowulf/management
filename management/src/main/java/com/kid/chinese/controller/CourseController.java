@@ -25,7 +25,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.google.gson.Gson;
-import com.kid.chinese.fix.FixApplication;
 import com.kid.chinese.model.TbCourse;
 import com.kid.chinese.model.TbCourseCategory;
 import com.kid.chinese.model.TbTeacher;

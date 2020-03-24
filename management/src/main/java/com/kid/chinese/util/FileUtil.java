@@ -22,7 +22,6 @@ import com.google.common.collect.Lists;
 import com.google.common.io.CharSink;
 import com.google.common.io.FileWriteMode;
 import com.google.common.io.Files;
-import com.kid.chinese.fix.FuturesQuote;
 import com.kid.chinese.vo.AtrVO;
 import com.kid.chinese.vo.FuturesQuoteVO;
 import com.kid.chinese.vo.Macd;
