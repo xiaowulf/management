@@ -21,16 +21,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.google.gson.Gson;
-import com.venus.finance.fix.FixApplication;
-import com.venus.finance.util.CodeUtil;
-import com.venus.finance.util.MathUtil;
-import com.venus.finance.vo.AtrVO;
-import com.venus.finance.vo.CandleVO;
-import com.venus.finance.vo.FuturesPriceVO;
-import com.venus.finance.vo.FuturesQuoteVO;
-import com.venus.finance.vo.FuturesStatistics;
-import com.venus.finance.vo.MacdVO;
-import com.venus.finance.vo.MaxMinPriceVO;
+import com.kid.chinese.fix.FixApplication;
+import com.kid.chinese.util.CodeUtil;
+import com.kid.chinese.util.MathUtil;
+import com.kid.chinese.vo.AtrVO;
+import com.kid.chinese.vo.CandleVO;
+import com.kid.chinese.vo.FuturesPriceVO;
+import com.kid.chinese.vo.FuturesQuoteVO;
+import com.kid.chinese.vo.FuturesStatistics;
+import com.kid.chinese.vo.MacdVO;
+import com.kid.chinese.vo.MaxMinPriceVO;
 
 
 

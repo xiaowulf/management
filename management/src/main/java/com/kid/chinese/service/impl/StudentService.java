@@ -8,20 +8,20 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.venus.finance.dao.IOperations;
-import com.venus.finance.dao.IStudentDAO;
-import com.venus.finance.dao.ITeacherDAO;
-import com.venus.finance.model.TbEmployee;
-import com.venus.finance.model.TbStudent;
-import com.venus.finance.model.TbTeacher;
-import com.venus.finance.model.FuturesMessage;
-import com.venus.finance.service.IFuturesMessageService;
-import com.venus.finance.service.IStudentService;
-import com.venus.finance.service.ITeacherService;
-import com.venus.finance.dao.IEmployeeDAO;
-import com.venus.finance.dao.IFuturesMessageDAO;
-import com.venus.finance.service.AbstractService;
-import com.venus.finance.service.IEmployeeService;
+import com.kid.chinese.dao.IOperations;
+import com.kid.chinese.dao.IStudentDAO;
+import com.kid.chinese.dao.ITeacherDAO;
+import com.kid.chinese.model.TbEmployee;
+import com.kid.chinese.model.TbStudent;
+import com.kid.chinese.model.TbTeacher;
+import com.kid.chinese.model.FuturesMessage;
+import com.kid.chinese.service.IFuturesMessageService;
+import com.kid.chinese.service.IStudentService;
+import com.kid.chinese.service.ITeacherService;
+import com.kid.chinese.dao.IEmployeeDAO;
+import com.kid.chinese.dao.IFuturesMessageDAO;
+import com.kid.chinese.service.AbstractService;
+import com.kid.chinese.service.IEmployeeService;
 
 
 @Service("studentService")

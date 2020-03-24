@@ -2,7 +2,7 @@ package com.kid.chinese.dao;
 
 import java.util.List;
 
-import com.venus.finance.model.TbStudent;
+import com.kid.chinese.model.TbStudent;
 
 public interface IStudentDAO extends IOperations<TbStudent> {
 	public Long findAllTbStudentCount(String name);

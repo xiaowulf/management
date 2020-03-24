@@ -1,6 +1,6 @@
 package com.kid.chinese.service;
-import com.venus.finance.dao.IOperations;
-import com.venus.finance.model.FuturesClose;
+import com.kid.chinese.dao.IOperations;
+import com.kid.chinese.model.FuturesClose;
 
 public interface IFuturesCloseService extends IOperations<FuturesClose> {
 

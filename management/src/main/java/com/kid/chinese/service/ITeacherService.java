@@ -1,9 +1,9 @@
 package com.kid.chinese.service;
 import java.util.List;
 
-import com.venus.finance.dao.IOperations;
-import com.venus.finance.model.TbEmployee;
-import com.venus.finance.model.TbTeacher;
+import com.kid.chinese.dao.IOperations;
+import com.kid.chinese.model.TbEmployee;
+import com.kid.chinese.model.TbTeacher;
 
 public interface ITeacherService extends IOperations<TbTeacher> {
 	public Long findAllTbTeacherCount(String name);

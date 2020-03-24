@@ -4,8 +4,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.CopyOnWriteArraySet;
 
-import com.venus.finance.socket.IndexQuoteServer;
-import com.venus.finance.vo.FuturesQuoteVO;
+import com.kid.chinese.socket.IndexQuoteServer;
+import com.kid.chinese.vo.FuturesQuoteVO;
 
 public class Variable {
 	private static ConcurrentLinkedQueue<FuturesQuoteVO> futuresQuoteQueue = 

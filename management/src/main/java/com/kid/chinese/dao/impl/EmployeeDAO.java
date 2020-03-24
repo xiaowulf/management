@@ -5,9 +5,9 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.springframework.stereotype.Repository;
 
-import com.venus.finance.model.TbEmployee;
-import com.venus.finance.dao.AbstractHibernateDAO;
-import com.venus.finance.dao.IEmployeeDAO;
+import com.kid.chinese.model.TbEmployee;
+import com.kid.chinese.dao.AbstractHibernateDAO;
+import com.kid.chinese.dao.IEmployeeDAO;
 
 @Repository("employeeDAO")
 public class EmployeeDAO extends AbstractHibernateDAO<TbEmployee> implements IEmployeeDAO {

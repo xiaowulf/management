@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.springframework.transaction.annotation.Transactional;
 
-import com.venus.finance.dao.IOperations;
+import com.kid.chinese.dao.IOperations;
 
 @Transactional
 public abstract class AbstractService<T extends Serializable> implements IOperations<T> {

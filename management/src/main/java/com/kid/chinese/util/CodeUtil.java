@@ -10,11 +10,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.venus.finance.vo.AtrVO;
-import com.venus.finance.vo.FuturesQuoteVO;
-import com.venus.finance.vo.Macd;
-import com.venus.finance.vo.MacdVO;
-import com.venus.finance.vo.MaxMinPriceVO;
+import com.kid.chinese.vo.AtrVO;
+import com.kid.chinese.vo.FuturesQuoteVO;
+import com.kid.chinese.vo.Macd;
+import com.kid.chinese.vo.MacdVO;
+import com.kid.chinese.vo.MaxMinPriceVO;
 
 public class CodeUtil {
 	public static List<String> getCodeList() {

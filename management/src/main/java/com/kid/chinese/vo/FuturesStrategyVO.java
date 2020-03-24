@@ -2,7 +2,7 @@ package com.kid.chinese.vo;
 
 import java.util.List;
 
-import com.venus.finance.model.FuturesStrategy;
+import com.kid.chinese.model.FuturesStrategy;
 
 public class FuturesStrategyVO{
 	private List<FuturesStrategy> strategyList;

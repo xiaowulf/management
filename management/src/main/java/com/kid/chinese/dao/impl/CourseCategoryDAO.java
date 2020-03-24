@@ -8,10 +8,10 @@ import org.hibernate.Session;
 import org.springframework.orm.hibernate3.HibernateCallback;
 import org.springframework.stereotype.Repository;
 
-import com.venus.finance.model.TbCourseCategory;
-import com.venus.finance.dao.AbstractHibernateDAO;
-import com.venus.finance.dao.ICourseCategoryDAO;
-import com.venus.finance.dao.ITeacherDAO;
+import com.kid.chinese.model.TbCourseCategory;
+import com.kid.chinese.dao.AbstractHibernateDAO;
+import com.kid.chinese.dao.ICourseCategoryDAO;
+import com.kid.chinese.dao.ITeacherDAO;
 
 @Repository("courseCategoryDAO")
 public class CourseCategoryDAO extends AbstractHibernateDAO<TbCourseCategory> implements ICourseCategoryDAO {

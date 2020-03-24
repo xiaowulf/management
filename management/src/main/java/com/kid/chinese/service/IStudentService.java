@@ -1,8 +1,8 @@
 package com.kid.chinese.service;
 import java.util.List;
 
-import com.venus.finance.dao.IOperations;
-import com.venus.finance.model.TbStudent;
+import com.kid.chinese.dao.IOperations;
+import com.kid.chinese.model.TbStudent;
 
 public interface IStudentService extends IOperations<TbStudent> {
 	public Long findAllTbStudentCount(String name);

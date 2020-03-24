@@ -1,6 +1,6 @@
 package com.kid.chinese.service;
-import com.venus.finance.dao.IOperations;
-import com.venus.finance.model.FuturesSusOrders;
+import com.kid.chinese.dao.IOperations;
+import com.kid.chinese.model.FuturesSusOrders;
 
 public interface IFuturesSusOrdersService extends IOperations<FuturesSusOrders> {
 

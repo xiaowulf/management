@@ -25,26 +25,26 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.google.gson.Gson;
-import com.venus.finance.fix.FixApplication;
-import com.venus.finance.model.LoginCommand;
-import com.venus.finance.model.TbEmployee;
-import com.venus.finance.model.TbTeacher;
-import com.venus.finance.service.IEmployeeService;
-import com.venus.finance.service.ITeacherService;
-import com.venus.finance.util.CodeUtil;
-import com.venus.finance.util.Constants;
-import com.venus.finance.util.MD5;
-import com.venus.finance.util.MathUtil;
-import com.venus.finance.util.Page;
-import com.venus.finance.util.PagerHelp;
-import com.venus.finance.util.PropertiesUtil;
-import com.venus.finance.vo.AtrVO;
-import com.venus.finance.vo.CandleVO;
-import com.venus.finance.vo.FuturesPriceVO;
-import com.venus.finance.vo.FuturesQuoteVO;
-import com.venus.finance.vo.FuturesStatistics;
-import com.venus.finance.vo.MacdVO;
-import com.venus.finance.vo.MaxMinPriceVO;
+import com.kid.chinese.fix.FixApplication;
+import com.kid.chinese.model.LoginCommand;
+import com.kid.chinese.model.TbEmployee;
+import com.kid.chinese.model.TbTeacher;
+import com.kid.chinese.service.IEmployeeService;
+import com.kid.chinese.service.ITeacherService;
+import com.kid.chinese.util.CodeUtil;
+import com.kid.chinese.util.Constants;
+import com.kid.chinese.util.MD5;
+import com.kid.chinese.util.MathUtil;
+import com.kid.chinese.util.Page;
+import com.kid.chinese.util.PagerHelp;
+import com.kid.chinese.util.PropertiesUtil;
+import com.kid.chinese.vo.AtrVO;
+import com.kid.chinese.vo.CandleVO;
+import com.kid.chinese.vo.FuturesPriceVO;
+import com.kid.chinese.vo.FuturesQuoteVO;
+import com.kid.chinese.vo.FuturesStatistics;
+import com.kid.chinese.vo.MacdVO;
+import com.kid.chinese.vo.MaxMinPriceVO;
 
 @Controller
 public class TeacherController {

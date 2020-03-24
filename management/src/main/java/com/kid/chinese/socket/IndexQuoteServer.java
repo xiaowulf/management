@@ -10,10 +10,10 @@ import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
-import com.venus.finance.util.FuturesQuoteDecoder;
-import com.venus.finance.util.FuturesQuoteEncoder;
-import com.venus.finance.util.Variable;
-import com.venus.finance.vo.FuturesQuoteVO;
+import com.kid.chinese.util.FuturesQuoteDecoder;
+import com.kid.chinese.util.FuturesQuoteEncoder;
+import com.kid.chinese.util.Variable;
+import com.kid.chinese.vo.FuturesQuoteVO;
 
 import quickfix.SessionID;
 import quickfix.StringField;

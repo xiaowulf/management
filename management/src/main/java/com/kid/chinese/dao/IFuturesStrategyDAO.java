@@ -1,6 +1,6 @@
 package com.kid.chinese.dao;
 
-import com.venus.finance.model.FuturesStrategy;
+import com.kid.chinese.model.FuturesStrategy;
 
 public interface IFuturesStrategyDAO extends IOperations<FuturesStrategy> {
     

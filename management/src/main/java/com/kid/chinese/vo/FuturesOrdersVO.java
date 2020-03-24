@@ -2,8 +2,8 @@ package com.kid.chinese.vo;
 
 import java.util.List;
 
-import com.venus.finance.model.FuturesClose;
-import com.venus.finance.model.FuturesOrders;
+import com.kid.chinese.model.FuturesClose;
+import com.kid.chinese.model.FuturesOrders;
 
 public class FuturesOrdersVO{
 	private List<FuturesOrders> ordersList;

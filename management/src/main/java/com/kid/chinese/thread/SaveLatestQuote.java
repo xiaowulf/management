@@ -8,12 +8,12 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-import com.venus.finance.socket.IndexQuoteServer;
-import com.venus.finance.util.CodeUtil;
-import com.venus.finance.util.FileUtil;
-import com.venus.finance.util.InitUtil;
-import com.venus.finance.util.Variable;
-import com.venus.finance.vo.FuturesQuoteVO;
+import com.kid.chinese.socket.IndexQuoteServer;
+import com.kid.chinese.util.CodeUtil;
+import com.kid.chinese.util.FileUtil;
+import com.kid.chinese.util.InitUtil;
+import com.kid.chinese.util.Variable;
+import com.kid.chinese.vo.FuturesQuoteVO;
 
 public class SaveLatestQuote implements Runnable {
 

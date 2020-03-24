@@ -2,9 +2,9 @@ package com.kid.chinese.thread;
 
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.venus.finance.fix.FixApplication;
-import com.venus.finance.util.Variable;
-import com.venus.finance.vo.FuturesQuoteVO;
+import com.kid.chinese.fix.FixApplication;
+import com.kid.chinese.util.Variable;
+import com.kid.chinese.vo.FuturesQuoteVO;
 
 public class ComputeTortoiseStrategy implements Runnable {
 

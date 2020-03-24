@@ -2,7 +2,7 @@ package com.kid.chinese.dao;
 
 import java.util.List;
 
-import com.venus.finance.model.TbEmployee;
+import com.kid.chinese.model.TbEmployee;
 
 public interface IEmployeeDAO extends IOperations<TbEmployee> {
 	TbEmployee findEmployeeByNameAndPwd(String username,String pwd);

@@ -1,13 +1,13 @@
 package com.kid.chinese.dao.impl;
 import org.springframework.stereotype.Repository;
 
-import com.venus.finance.dao.IFuturesStrategyDAO;
-import com.venus.finance.dao.IFuturesSusOrdersDAO;
-import com.venus.finance.model.FuturesOrders;
-import com.venus.finance.model.FuturesStrategy;
-import com.venus.finance.model.FuturesSusOrders;
-import com.venus.finance.dao.AbstractHibernateDAO;
-import com.venus.finance.dao.IFuturesOrdersDAO;
+import com.kid.chinese.dao.IFuturesStrategyDAO;
+import com.kid.chinese.dao.IFuturesSusOrdersDAO;
+import com.kid.chinese.model.FuturesOrders;
+import com.kid.chinese.model.FuturesStrategy;
+import com.kid.chinese.model.FuturesSusOrders;
+import com.kid.chinese.dao.AbstractHibernateDAO;
+import com.kid.chinese.dao.IFuturesOrdersDAO;
 
 @Repository("futuresSusOrdersDAO")
 public class FuturesSusOrdersDAO extends AbstractHibernateDAO<FuturesSusOrders> implements IFuturesSusOrdersDAO {

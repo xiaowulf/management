@@ -25,17 +25,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.google.gson.Gson;
-import com.venus.finance.fix.FixApplication;
-import com.venus.finance.model.FuturesMessage;
-import com.venus.finance.service.IFuturesMessageService;
-import com.venus.finance.util.CodeUtil;
-import com.venus.finance.util.FileUtil;
-import com.venus.finance.util.InitUtil;
-import com.venus.finance.util.MathUtil;
-import com.venus.finance.vo.CandleVO;
-import com.venus.finance.vo.FuturesPriceVO;
-import com.venus.finance.vo.FuturesQuoteVO;
-import com.venus.finance.vo.SuggestVO;
+import com.kid.chinese.fix.FixApplication;
+import com.kid.chinese.model.FuturesMessage;
+import com.kid.chinese.service.IFuturesMessageService;
+import com.kid.chinese.util.CodeUtil;
+import com.kid.chinese.util.FileUtil;
+import com.kid.chinese.util.InitUtil;
+import com.kid.chinese.util.MathUtil;
+import com.kid.chinese.vo.CandleVO;
+import com.kid.chinese.vo.FuturesPriceVO;
+import com.kid.chinese.vo.FuturesQuoteVO;
+import com.kid.chinese.vo.SuggestVO;
 
 @Controller
 public class IndexController {

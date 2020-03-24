@@ -1,8 +1,8 @@
 package com.kid.chinese.service;
 import java.util.List;
 
-import com.venus.finance.dao.IOperations;
-import com.venus.finance.model.TbCourseCategory;
+import com.kid.chinese.dao.IOperations;
+import com.kid.chinese.model.TbCourseCategory;
 
 public interface ICourseCategoryService extends IOperations<TbCourseCategory> {
 	public Long findAllTbCourseCategoryCount(String name);

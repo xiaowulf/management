@@ -1,8 +1,8 @@
 package com.kid.chinese.service;
 import java.util.List;
 
-import com.venus.finance.dao.IOperations;
-import com.venus.finance.model.TbEmployee;
+import com.kid.chinese.dao.IOperations;
+import com.kid.chinese.model.TbEmployee;
 
 public interface IEmployeeService extends IOperations<TbEmployee> {
 	TbEmployee findEmployeeByNameAndPwd(String username, String pwd);

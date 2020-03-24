@@ -1,9 +1,9 @@
 package com.kid.chinese.dao.impl;
 import org.springframework.stereotype.Repository;
 
-import com.venus.finance.dao.IFuturesStrategyDAO;
-import com.venus.finance.model.FuturesStrategy;
-import com.venus.finance.dao.AbstractHibernateDAO;
+import com.kid.chinese.dao.IFuturesStrategyDAO;
+import com.kid.chinese.model.FuturesStrategy;
+import com.kid.chinese.dao.AbstractHibernateDAO;
 
 @Repository("futuresStrategyDAO")
 public class FuturesStrategyDAO extends AbstractHibernateDAO<FuturesStrategy> implements IFuturesStrategyDAO {

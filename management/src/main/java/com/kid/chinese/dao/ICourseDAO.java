@@ -2,8 +2,8 @@ package com.kid.chinese.dao;
 
 import java.util.List;
 
-import com.venus.finance.model.TbCourse;
-import com.venus.finance.model.TbTeacher;
+import com.kid.chinese.model.TbCourse;
+import com.kid.chinese.model.TbTeacher;
 
 public interface ICourseDAO extends IOperations<TbCourse>{
 	public Long findAllTbCourseCount(String name);

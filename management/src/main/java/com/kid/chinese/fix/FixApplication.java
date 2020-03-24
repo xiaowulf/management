@@ -48,9 +48,9 @@ import quickfix.field.TransactTime;
 
 import javax.swing.*;
 
-import com.venus.finance.socket.IndexQuoteServer;
-import com.venus.finance.util.Variable;
-import com.venus.finance.vo.FuturesQuoteVO;
+import com.kid.chinese.socket.IndexQuoteServer;
+import com.kid.chinese.util.Variable;
+import com.kid.chinese.vo.FuturesQuoteVO;
 
 import java.io.IOException;
 import java.math.BigDecimal;

@@ -22,13 +22,13 @@ import com.google.common.collect.Lists;
 import com.google.common.io.CharSink;
 import com.google.common.io.FileWriteMode;
 import com.google.common.io.Files;
-import com.venus.finance.fix.FuturesQuote;
-import com.venus.finance.vo.AtrVO;
-import com.venus.finance.vo.FuturesQuoteVO;
-import com.venus.finance.vo.Macd;
-import com.venus.finance.vo.MacdVO;
-import com.venus.finance.vo.MaxMinPriceVO;
-import com.venus.finance.vo.SuggestVO;
+import com.kid.chinese.fix.FuturesQuote;
+import com.kid.chinese.vo.AtrVO;
+import com.kid.chinese.vo.FuturesQuoteVO;
+import com.kid.chinese.vo.Macd;
+import com.kid.chinese.vo.MacdVO;
+import com.kid.chinese.vo.MaxMinPriceVO;
+import com.kid.chinese.vo.SuggestVO;
 
 public class FileUtil {
 	public List<String> readFileToList(File file) {

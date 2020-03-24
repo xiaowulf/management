@@ -15,13 +15,13 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 
-import com.venus.finance.fix.FixApplication;
-import com.venus.finance.thread.ComputeLatestQuote;
-import com.venus.finance.thread.SaveLatestQuote;
-import com.venus.finance.util.CodeUtil;
-import com.venus.finance.util.FileUtil;
-import com.venus.finance.util.InitUtil;
-import com.venus.finance.vo.FuturesQuoteVO;
+import com.kid.chinese.fix.FixApplication;
+import com.kid.chinese.thread.ComputeLatestQuote;
+import com.kid.chinese.thread.SaveLatestQuote;
+import com.kid.chinese.util.CodeUtil;
+import com.kid.chinese.util.FileUtil;
+import com.kid.chinese.util.InitUtil;
+import com.kid.chinese.vo.FuturesQuoteVO;
 
 import quickfix.ConfigError;
 import quickfix.DefaultMessageFactory;

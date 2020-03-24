@@ -8,11 +8,11 @@ import org.hibernate.Session;
 import org.springframework.orm.hibernate3.HibernateCallback;
 import org.springframework.stereotype.Repository;
 
-import com.venus.finance.model.TbStudent;
-import com.venus.finance.model.TbTeacher;
-import com.venus.finance.dao.AbstractHibernateDAO;
-import com.venus.finance.dao.IStudentDAO;
-import com.venus.finance.dao.ITeacherDAO;
+import com.kid.chinese.model.TbStudent;
+import com.kid.chinese.model.TbTeacher;
+import com.kid.chinese.dao.AbstractHibernateDAO;
+import com.kid.chinese.dao.IStudentDAO;
+import com.kid.chinese.dao.ITeacherDAO;
 
 @Repository("studentDAO")
 public class StudentDAO extends AbstractHibernateDAO<TbStudent> implements IStudentDAO {
