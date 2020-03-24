@@ -14,59 +14,18 @@ public class TbCourse implements java.io.Serializable{
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 7821410536667520876L;
+	private static final long serialVersionUID = -5284027288950275460L;
 	private Long id;
-	private String truename;
-	private String sex;
-	private Integer age;
-	private String pic1;
-	private String pic2;
-	private String pic3;
-	private String tel;
-	private String mobile;
-	private String password;
-	private String username;
-	private String idcard;
-	private String education;
-	private String certificate;
-	private String resume;
-	private String email;
-	private String video1;
-	private String video2;
-	private String video3;
-	private Double score;
-	private Integer status;
+	private String coursename;
 	private Long create_date;
-	private Long birthday;
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((username == null) ? 0 : username.hashCode());
-		return result;
-	}
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		TbCourse other = (TbCourse) obj;
-		if (id == null) {
-			if (other.id != null)
-				return false;
-		} else if (!id.equals(other.id))
-			return false;
-		if (username == null) {
-			if (other.username != null)
-				return false;
-		} else if (!username.equals(other.username))
-			return false;
-		return true;
-	}
+	private String coursecategoryname;
+	private Long coursecategoryid;
+	private Integer status;
+	private Long update_date;
+	private String file1;
+	private String file2;
+	private String file3;
+	private String description;
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "id", unique = true, nullable = false)
@@ -76,145 +35,12 @@ public class TbCourse implements java.io.Serializable{
 	public void setId(Long id) {
 		this.id = id;
 	}
-	@Column(name = "truename")
-	public String getTruename() {
-		return truename;
+	@Column(name = "coursename")
+	public String getCoursename() {
+		return coursename;
 	}
-	public void setTruename(String truename) {
-		this.truename = truename;
-	}
-	@Column(name = "sex")
-	public String getSex() {
-		return sex;
-	}
-	public void setSex(String sex) {
-		this.sex = sex;
-	}
-	@Column(name = "age")
-	public Integer getAge() {
-		return age;
-	}
-	public void setAge(Integer age) {
-		this.age = age;
-	}
-	@Column(name = "pic1")
-	public String getPic1() {
-		return pic1;
-	}
-	public void setPic1(String pic1) {
-		this.pic1 = pic1;
-	}
-	@Column(name = "pic2")
-	public String getPic2() {
-		return pic2;
-	}
-	public void setPic2(String pic2) {
-		this.pic2 = pic2;
-	}
-	@Column(name = "pic3")
-	public String getPic3() {
-		return pic3;
-	}
-	public void setPic3(String pic3) {
-		this.pic3 = pic3;
-	}
-	@Column(name = "tel")
-	public String getTel() {
-		return tel;
-	}
-	public void setTel(String tel) {
-		this.tel = tel;
-	}
-	@Column(name = "mobile")
-	public String getMobile() {
-		return mobile;
-	}
-	public void setMobile(String mobile) {
-		this.mobile = mobile;
-	}
-	@Column(name = "password")
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	@Column(name = "username")
-	public String getUsername() {
-		return username;
-	}
-	public void setUsername(String username) {
-		this.username = username;
-	}
-	@Column(name = "idcard")
-	public String getIdcard() {
-		return idcard;
-	}
-	public void setIdcard(String idcard) {
-		this.idcard = idcard;
-	}
-	@Column(name = "education")
-	public String getEducation() {
-		return education;
-	}
-	public void setEducation(String education) {
-		this.education = education;
-	}
-	@Column(name = "certificate")
-	public String getCertificate() {
-		return certificate;
-	}
-	public void setCertificate(String certificate) {
-		this.certificate = certificate;
-	}
-	@Column(name = "resume")
-	public String getResume() {
-		return resume;
-	}
-	public void setResume(String resume) {
-		this.resume = resume;
-	}
-	@Column(name = "email")
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	@Column(name = "video1")
-	public String getVideo1() {
-		return video1;
-	}
-	public void setVideo1(String video1) {
-		this.video1 = video1;
-	}
-	@Column(name = "video2")
-	public String getVideo2() {
-		return video2;
-	}
-	public void setVideo2(String video2) {
-		this.video2 = video2;
-	}
-	@Column(name = "video3")
-	public String getVideo3() {
-		return video3;
-	}
-	public void setVideo3(String video3) {
-		this.video3 = video3;
-	}
-	@Column(name = "score")
-	public Double getScore() {
-		return score;
-	}
-	public void setScore(Double score) {
-		this.score = score;
-	}
-	@Column(name = "status")
-	public Integer getStatus() {
-		return status;
-	}
-	public void setStatus(Integer status) {
-		this.status = status;
+	public void setCoursename(String coursename) {
+		this.coursename = coursename;
 	}
 	@Column(name = "create_date")
 	public Long getCreate_date() {
@@ -223,12 +49,60 @@ public class TbCourse implements java.io.Serializable{
 	public void setCreate_date(Long create_date) {
 		this.create_date = create_date;
 	}
-	@Column(name = "birthday")
-	public Long getBirthday() {
-		return birthday;
+	@Column(name = "coursecategoryname")
+	public String getCoursecategoryname() {
+		return coursecategoryname;
 	}
-	public void setBirthday(Long birthday) {
-		this.birthday = birthday;
+	public void setCoursecategoryname(String coursecategoryname) {
+		this.coursecategoryname = coursecategoryname;
 	}
-	
+	@Column(name = "coursecategoryid")
+	public Long getCoursecategoryid() {
+		return coursecategoryid;
+	}
+	public void setCoursecategoryid(Long coursecategoryid) {
+		this.coursecategoryid = coursecategoryid;
+	}
+	@Column(name = "status")
+	public Integer getStatus() {
+		return status;
+	}
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
+	@Column(name = "update_date")
+	public Long getUpdate_date() {
+		return update_date;
+	}
+	public void setUpdate_date(Long update_date) {
+		this.update_date = update_date;
+	}
+	@Column(name = "file1")
+	public String getFile1() {
+		return file1;
+	}
+	public void setFile1(String file1) {
+		this.file1 = file1;
+	}
+	@Column(name = "file2")
+	public String getFile2() {
+		return file2;
+	}
+	public void setFile2(String file2) {
+		this.file2 = file2;
+	}
+	@Column(name = "file3")
+	public String getFile3() {
+		return file3;
+	}
+	public void setFile3(String file3) {
+		this.file3 = file3;
+	}
+	@Column(name = "description")
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
 }

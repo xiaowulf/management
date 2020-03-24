@@ -32,6 +32,9 @@ import com.venus.finance.vo.FuturesStatistics;
 import com.venus.finance.vo.MacdVO;
 import com.venus.finance.vo.MaxMinPriceVO;
 
+
+
+
 @Controller
 public class AnalyseController {
 	/**
