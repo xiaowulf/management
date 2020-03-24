@@ -30,7 +30,7 @@
 	<filter>
     	<display-name>loginFilter</display-name>
     	<filter-name>loginFilter</filter-name>
-    	<filter-class>com.venus.finance.filter.LoginFilter</filter-class>
+    	<filter-class>com.kid.chinese.filter.LoginFilter</filter-class>
   	</filter>
   	<filter-mapping>
     	<filter-name>loginFilter</filter-name>
@@ -40,7 +40,7 @@
 	<!--生成验证码的Servlet-->
   	<servlet> 
 		<servlet-name>imageServlet</servlet-name> 
-		<servlet-class>com.venus.finance.servlet.ImageServlet</servlet-class> 
+		<servlet-class>com.kid.chinese.servlet.ImageServlet</servlet-class> 
   	</servlet> 
 
   	<servlet-mapping> 
