@@ -163,7 +163,7 @@ public class CourseController {
 		return "m-course-e";
 	}
 	
-	@RequestMapping(value = "/m_course_e.html", method = RequestMethod.GET)
+	@RequestMapping(value = "/m-course-e.html", method = RequestMethod.GET)
 	public String m_course_e(HttpServletRequest request, ModelMap model) {
 		try {
 			Long id = Long.parseLong(request.getParameter("id"));

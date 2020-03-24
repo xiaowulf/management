@@ -54,17 +54,17 @@
 				   	 			<th width="10%">
 				   	 				<spring:message code="course.category.name"/>
 				   	 			</th>
-				   	 			<th width="15%">
-				   	 			</th>
-				   	 			<th width="15%">
+				   	 			<th width="10%">
+				   	 				<spring:message code="system.createdate"/>
 				   	 			</th>
 				   	 			<th width="10%">
+				   	 				<spring:message code="system.updatedate"/>
 				   	 			</th>
 				   	 			<th width="10%">
+				   	 				<spring:message code="course.status"/>
 				   	 			</th>
 				   	 			<th width="10%">
-				   	 			</th>
-				   	 			<th width="10%">
+				   	 				<spring:message code="system.edit"/>
 				   	 			</th>
 				   	 		</tr>
 				   	 	</thead>
@@ -84,16 +84,18 @@
 				   	 				<c:out value="${dataList.coursecategoryname}"></c:out>
 					   	 		</td>
 					   	 		<td>
+					   	 			<c:out value="${dataList.create_date}"></c:out>
 					   	 		</td>
 					   	 		<td>
+				   	 				<c:out value="${dataList.update_date}"></c:out>
 					   	 		</td>
 					   	 		<td>
-					   	 		</td>
-					   	 		<td>
-				   	 				
-					   	 		</td>
-					   	 		<td>
-				   	 				
+				   	 				<c:if test="${dataList.status==0}">
+					   	 				<spring:message code="course.status.off"/>
+					   	 			</c:if>
+						   	 		<c:if test="${dataList.status==1}">
+					   	 				<spring:message code="course.status.on"/>
+					   	 			</c:if>
 					   	 		</td>
 					   	 		<td>
 						   	 		<a href='m-course-e.html?id=<c:out value="${dataList.id}"></c:out>' target="_blank"><img alt="" src="./images/11.png" style="margin-top:5px;cursor:pointer;"></a>

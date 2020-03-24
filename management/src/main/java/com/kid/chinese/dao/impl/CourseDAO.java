@@ -38,17 +38,47 @@ public class CourseDAO extends AbstractHibernateDAO<TbCourse> implements ICourse
 	}
 
 	@Override
-	public List findAllTbCourse(int start, int pageSize, String code) {
+	public List findAllTbCourse(int start, int pageSize, String name) {
+		try {
+			final String hql = "from TbCourse u where u.coursename is null or u.coursename like :name  order by id desc";
+			
+			Query query = getCurrentSession().createQuery(hql).setParameter("name", "%"+name+"%");
+			//3.分页
+			query.setFirstResult(start);//从什么位置开始，默认为0
+			query.setMaxResults(pageSize);//最多检出的条数
+			//4.执行SQL
+			List list = query.list();
+			return list;
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
 		return null;
 	}
 
 	@Override
 	public boolean saveTbCourse(TbCourse tbCourse) {
-		return false;
+		boolean result = false;
+		try {
+			getCurrentSession().saveOrUpdate(tbCourse);
+			result = true;
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		return result;
 	}
 
 	@Override
-	public TbCourse findAllTbCourseByCode(String code) {
+	public TbCourse findAllTbCourseByCode(String coursename) {
+		try {
+			final String hql = "from TbCourse u where u.coursename  = :coursename  order by id desc";
+			Query query = getCurrentSession().createQuery(hql).setParameter("coursename", coursename);
+			List list = query.list();
+			if(list.size()>0) {
+				return (TbCourse)list.get(0);
+			}
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
 		return null;
 	}
 }
