@@ -58,6 +58,7 @@
                     <li  data-options='state:closed,id:1,attributes:{urlaction:"m-course.html"}'>安排课程</li>
                 </ul>
             </li>
+            <!--  
             <li>
                 <span>财务管理</span>
                 <ul>
@@ -76,6 +77,7 @@
                     <li  data-options='state:closed,id:1,attributes:{urlaction:"m-course.html"}'>成绩管理</li>
                 </ul>
             </li>
+            -->
         </ul>
         </div>
         
