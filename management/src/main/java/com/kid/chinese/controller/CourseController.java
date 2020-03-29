@@ -28,6 +28,7 @@ import com.google.gson.Gson;
 import com.kid.chinese.model.TbCourse;
 import com.kid.chinese.model.TbCourseCategory;
 import com.kid.chinese.model.TbTeacher;
+import com.kid.chinese.service.ICourseArrangeService;
 import com.kid.chinese.service.ICourseCategoryService;
 import com.kid.chinese.service.ICourseService;
 import com.kid.chinese.service.ITeacherService;
@@ -125,7 +126,78 @@ public class CourseController {
 		}
 		return "m-course-category";
 	}
-
+	@RequestMapping(value = "/m-course-arrange.html", method = RequestMethod.GET)
+	public String m_course_arrange(HttpServletRequest request, ModelMap model) {
+		try {
+			String name = "";
+			if (null != request.getParameter("name")) {
+				name = (String) request.getParameter("name");
+			}
+			int total = courseArrangeService.findAllTbCourseArrangementCount(name).intValue();
+			Page page = null;
+			int currentPage = 1;
+			if (null != request.getParameter("currentPage")) {
+				currentPage = Integer.parseInt(request.getParameter("currentPage"));
+			}
+			int pageSize = Constants.pageSize;
+			page = PagerHelp.getPager(request, total, pageSize);
+			if (currentPage <= 1) {
+				page.setLastPage(1);
+			} else {
+				page.setLastPage(currentPage - 1);
+			}
+			if (currentPage < page.getTotalPages()) {
+				page.setNextPage(currentPage + 1);
+			} else {
+				page.setNextPage(page.getTotalPages());
+			}
+			page.setPageAction("m-course-arrange.html?name=" + name + "&");
+			model.addAttribute("page", page);
+			model.addAttribute("name", name);
+			List dataList = courseArrangeService.findAllTbCourseArrangement(page.getStartRow(), pageSize, name);
+			model.addAttribute("dataList", dataList);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return "error";
+		}
+		return "m-course-arrange";
+	}
+	@RequestMapping(value = "/m-course-enroll.html", method = RequestMethod.GET)
+	public String m_course_enroll(HttpServletRequest request, ModelMap model) {
+		try {
+			String name = "";
+			if (null != request.getParameter("name")) {
+				name = (String) request.getParameter("name");
+			}
+			int total = courseArrangeService.findAllTbCourseArrangementCount(name).intValue();
+			Page page = null;
+			int currentPage = 1;
+			if (null != request.getParameter("currentPage")) {
+				currentPage = Integer.parseInt(request.getParameter("currentPage"));
+			}
+			int pageSize = Constants.pageSize;
+			page = PagerHelp.getPager(request, total, pageSize);
+			if (currentPage <= 1) {
+				page.setLastPage(1);
+			} else {
+				page.setLastPage(currentPage - 1);
+			}
+			if (currentPage < page.getTotalPages()) {
+				page.setNextPage(currentPage + 1);
+			} else {
+				page.setNextPage(page.getTotalPages());
+			}
+			page.setPageAction("m-course-arrange.html?name=" + name + "&");
+			model.addAttribute("page", page);
+			model.addAttribute("name", name);
+			List dataList = courseArrangeService.findAllTbCourseArrangement(page.getStartRow(), pageSize, name);
+			model.addAttribute("dataList", dataList);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return "error";
+		}
+		return "m-course-enroll";
+	}
 	@RequestMapping(value = "/m-course-category-e.html", method = RequestMethod.GET)
 	public String m_course_category_e(HttpServletRequest request, ModelMap model) {
 		try {
@@ -219,4 +291,6 @@ public class CourseController {
 	private ICourseCategoryService courseCategoryService;
 	@Resource(name = "courseService")
 	private ICourseService courseService;
+	@Resource(name = "courseArrangeService")
+	private ICourseArrangeService courseArrangeService;
 }

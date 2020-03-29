@@ -37,17 +37,6 @@
         <div data-options="region:'west',split:true" title='<spring:message code="system.welcome"/><c:out value="${tbEmployee.trueName}"></c:out>' style="width:300px;">
         
         <ul class="easyui-tree" id="funcTree">
-        	<!--  
-            <li>
-            	<span>系统管理</span>
-                <ul>
-                    <li  data-options='state:closed,id:1,attributes:{urlaction:"m-employee.html"}'>员工管理</li>
-                    <li  data-options='state:closed,id:1,attributes:{urlaction:"m-role.html"}'>角色管理</li>
-                    <li  data-options='state:closed,id:1,attributes:{urlaction:"m-authority.html"}'>权限管理</li>
-                    <li  data-options='state:closed,id:1,attributes:{urlaction:"m-log.html"}'>日志管理</li>
-                </ul>
-            </li>
-            -->
             <li>
                 <span>教学管理</span>
                 <ul>
@@ -55,7 +44,8 @@
                     <li  data-options='state:closed,id:1,attributes:{urlaction:"m-student.html"}'>学生管理</li>
                     <li  data-options='state:closed,id:1,attributes:{urlaction:"m-course-category.html"}'>课程类别</li>
                     <li  data-options='state:closed,id:1,attributes:{urlaction:"m-course.html"}'>课程管理</li>
-                    <li  data-options='state:closed,id:1,attributes:{urlaction:"m-course.html"}'>安排课程</li>
+                    <li  data-options='state:closed,id:1,attributes:{urlaction:"m-course-arrange.html"}'>安排课程</li>
+                    <li  data-options='state:closed,id:1,attributes:{urlaction:"m-course-enroll.html"}'>学生选课</li>
                 </ul>
             </li>
             <!--  
@@ -75,6 +65,17 @@
                     <li  data-options='state:closed,id:1,attributes:{urlaction:"m-student.html"}'>学生管理</li>
                     <li  data-options='state:closed,id:1,attributes:{urlaction:"m-course.html"}'>课程管理</li>
                     <li  data-options='state:closed,id:1,attributes:{urlaction:"m-course.html"}'>成绩管理</li>
+                </ul>
+            </li>
+            -->
+            <!--  
+            <li>
+            	<span>系统管理</span>
+                <ul>
+                    <li  data-options='state:closed,id:1,attributes:{urlaction:"m-employee.html"}'>员工管理</li>
+                    <li  data-options='state:closed,id:1,attributes:{urlaction:"m-role.html"}'>角色管理</li>
+                    <li  data-options='state:closed,id:1,attributes:{urlaction:"m-authority.html"}'>权限管理</li>
+                    <li  data-options='state:closed,id:1,attributes:{urlaction:"m-log.html"}'>日志管理</li>
                 </ul>
             </li>
             -->

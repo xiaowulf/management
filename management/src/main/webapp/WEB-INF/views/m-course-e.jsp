@@ -34,7 +34,7 @@
 						<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"
 							style="border: 1px solid #4B306C; height: 30px;">
 							<label style="height: 25px; margin-top: 2px; text-align: right;"><spring:message
-									code="course.coursename" /></label>
+									code="course.chinesename" /></label>
 						</div>
 						<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10"
 							style="border: 1px solid #4B306C; height: 30px;">
