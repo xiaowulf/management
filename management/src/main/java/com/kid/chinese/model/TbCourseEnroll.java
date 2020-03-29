@@ -24,10 +24,9 @@ public class TbCourseEnroll implements java.io.Serializable{
 	private Long course_arrange_id;
 	private Integer status;
 	private Long course_id;
-	private String coursename;
+	private String course_name;
 	private Date create_date_time;
-	private String coursecategoryname;
-	private Long coursecategoryid;
+	
 	
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
@@ -38,12 +37,12 @@ public class TbCourseEnroll implements java.io.Serializable{
 	public void setId(Long id) {
 		this.id = id;
 	}
-	@Column(name = "coursename")
-	public String getCoursename() {
-		return coursename;
+	@Column(name = "course_name")
+	public String getCourse_name() {
+		return course_name;
 	}
-	public void setCoursename(String coursename) {
-		this.coursename = coursename;
+	public void setCourse_name(String course_name) {
+		this.course_name = course_name;
 	}
 	@Column(name = "student_id")
 	public Long getStudent_id() {
@@ -87,19 +86,4 @@ public class TbCourseEnroll implements java.io.Serializable{
 	public void setCreate_date_time(Date create_date_time) {
 		this.create_date_time = create_date_time;
 	}
-	@Column(name = "coursecategoryname")
-	public String getCoursecategoryname() {
-		return coursecategoryname;
-	}
-	public void setCoursecategoryname(String coursecategoryname) {
-		this.coursecategoryname = coursecategoryname;
-	}
-	@Column(name = "coursecategoryid")
-	public Long getCoursecategoryid() {
-		return coursecategoryid;
-	}
-	public void setCoursecategoryid(Long coursecategoryid) {
-		this.coursecategoryid = coursecategoryid;
-	}
-	
 }

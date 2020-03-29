@@ -30,6 +30,7 @@ import com.kid.chinese.model.TbCourseCategory;
 import com.kid.chinese.model.TbTeacher;
 import com.kid.chinese.service.ICourseArrangeService;
 import com.kid.chinese.service.ICourseCategoryService;
+import com.kid.chinese.service.ICourseEnrollService;
 import com.kid.chinese.service.ICourseService;
 import com.kid.chinese.service.ITeacherService;
 import com.kid.chinese.util.CodeUtil;
@@ -169,7 +170,7 @@ public class CourseController {
 			if (null != request.getParameter("name")) {
 				name = (String) request.getParameter("name");
 			}
-			int total = courseArrangeService.findAllTbCourseArrangementCount(name).intValue();
+			int total = courseEnrollService.findAllTbCourseEnrollCount(name).intValue();
 			Page page = null;
 			int currentPage = 1;
 			if (null != request.getParameter("currentPage")) {
@@ -187,10 +188,10 @@ public class CourseController {
 			} else {
 				page.setNextPage(page.getTotalPages());
 			}
-			page.setPageAction("m-course-arrange.html?name=" + name + "&");
+			page.setPageAction("m-course-enroll.html?name=" + name + "&");
 			model.addAttribute("page", page);
 			model.addAttribute("name", name);
-			List dataList = courseArrangeService.findAllTbCourseArrangement(page.getStartRow(), pageSize, name);
+			List dataList = courseEnrollService.findAllTbCourseEnroll(page.getStartRow(), pageSize, name);
 			model.addAttribute("dataList", dataList);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -293,4 +294,6 @@ public class CourseController {
 	private ICourseService courseService;
 	@Resource(name = "courseArrangeService")
 	private ICourseArrangeService courseArrangeService;
+	@Resource(name = "courseEnrollService")
+	private ICourseEnrollService courseEnrollService;
 }
