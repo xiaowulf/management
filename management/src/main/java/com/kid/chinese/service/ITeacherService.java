@@ -2,7 +2,6 @@ package com.kid.chinese.service;
 import java.util.List;
 
 import com.kid.chinese.dao.IOperations;
-import com.kid.chinese.model.TbEmployee;
 import com.kid.chinese.model.TbTeacher;
 
 public interface ITeacherService extends IOperations<TbTeacher> {

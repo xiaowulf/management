@@ -17,14 +17,14 @@ public class TbTeacherEvaluation implements java.io.Serializable{
 	 */
 	private static final long serialVersionUID = -6082389614626222041L;
 	private Long id;
-	private String studentname;
+	private String student_name;
 	private Long student_id;
 	private Double score;
 	private Long create_date;
 	private String create_time;
 	private String comment;
 	private Long teacher_id;
-	private String teachername;
+	private String teacher_name;
 	
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
@@ -35,12 +35,12 @@ public class TbTeacherEvaluation implements java.io.Serializable{
 	public void setId(Long id) {
 		this.id = id;
 	}
-	@Column(name = "studentname")
-	public String getStudentname() {
-		return studentname;
+	@Column(name = "student_name")
+	public String getStudent_name() {
+		return student_name;
 	}
-	public void setStudentname(String studentname) {
-		this.studentname = studentname;
+	public void setStudent_name(String student_name) {
+		this.student_name = student_name;
 	}
 	@Column(name = "student_id")
 	public Long getStudent_id() {
@@ -84,13 +84,11 @@ public class TbTeacherEvaluation implements java.io.Serializable{
 	public void setTeacher_id(Long teacher_id) {
 		this.teacher_id = teacher_id;
 	}
-	@Column(name = "teachername")
-	public String getTeachername() {
-		return teachername;
+	@Column(name = "teacher_name")
+	public String getTeacher_name() {
+		return teacher_name;
 	}
-	public void setTeachername(String teachername) {
-		this.teachername = teachername;
+	public void setTeacher_name(String teacher_name) {
+		this.teacher_name = teacher_name;
 	}
-	
-	
 }

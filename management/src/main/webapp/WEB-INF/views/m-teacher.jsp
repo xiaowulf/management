@@ -57,10 +57,10 @@
 				   	 			<th width="10%">
 				   	 				<spring:message code="teacher.username"/>
 				   	 			</th>
-				   	 			<th width="15%">
+				   	 			<th width="10%">
 				   	 				<spring:message code="teacher.email"/>
 				   	 			</th>
-				   	 			<th width="15%">
+				   	 			<th width="10%">
 				   	 				<spring:message code="teacher.mobile"/>
 				   	 			</th>
 				   	 			<th width="10%">
@@ -110,9 +110,8 @@
 					   	 				<spring:message code="teacher.sex.other"/>
 					   	 			</c:if>
 					   	 		</td>
-					   	 		
 					   	 		<td>
-				   	 				<c:out value="${dataList.score}"></c:out>
+					   	 			<a href='m-teacher-c.html?id=<c:out value="${dataList.id}"></c:out>' target="_blank"><c:out value="${dataList.score}"></c:out></a>
 					   	 		</td>
 					   	 		<td>
 				   	 				<c:if test="${dataList.status==0}">

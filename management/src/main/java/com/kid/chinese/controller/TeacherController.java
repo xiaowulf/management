@@ -29,6 +29,7 @@ import com.kid.chinese.model.LoginCommand;
 import com.kid.chinese.model.TbEmployee;
 import com.kid.chinese.model.TbTeacher;
 import com.kid.chinese.service.IEmployeeService;
+import com.kid.chinese.service.ITeacherEvaluationService;
 import com.kid.chinese.service.ITeacherService;
 import com.kid.chinese.util.CodeUtil;
 import com.kid.chinese.util.Constants;
@@ -86,8 +87,44 @@ public class TeacherController {
 		}
 		return "m-teacher";
 	}
-
-	
+	/*
+	 * 老师评价查询
+	 */
+	@RequestMapping(value = "/m-teacher-c.html", method = RequestMethod.GET)
+	public String m_teacher_c(HttpServletRequest request, ModelMap model) {
+		try {
+			Long teacher_id = 0L;
+			if (null != request.getParameter("id")) {
+				teacher_id = Long.parseLong(request.getParameter("id"));
+			}
+			int total = teacherEvaluationService.findAllTbTeacherEvaluationCount(teacher_id).intValue();
+			Page page = null;
+			int currentPage = 1;
+			if (null != request.getParameter("currentPage")) {
+				currentPage = Integer.parseInt(request.getParameter("currentPage"));
+			}
+			int pageSize = Constants.pageSize;
+			page = PagerHelp.getPager(request, total, pageSize);
+			if (currentPage <= 1) {
+				page.setLastPage(1);
+			} else {
+				page.setLastPage(currentPage - 1);
+			}
+			if (currentPage < page.getTotalPages()) {
+				page.setNextPage(currentPage + 1);
+			} else {
+				page.setNextPage(page.getTotalPages());
+			}
+			page.setPageAction("m-teacher-c.html?id="+teacher_id+"&");
+			model.addAttribute("page", page);
+			List dataList = teacherEvaluationService.findAllTbTeacherEvaluation(page.getStartRow(), pageSize, teacher_id);
+			model.addAttribute("dataList", dataList);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return "error";
+		}
+		return "m-teacher-c";
+	}
 
 	// 编辑老师的资料
 	@RequestMapping(value = "/m-teacher-e.html", method = RequestMethod.GET)
@@ -175,5 +212,7 @@ public class TeacherController {
 
 	@Resource(name = "teacherService")
 	private ITeacherService teacherService;
+	@Resource(name = "teacherEvaluationService")
+	private ITeacherEvaluationService teacherEvaluationService;
 
 }
