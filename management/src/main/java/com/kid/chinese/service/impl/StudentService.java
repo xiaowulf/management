@@ -45,4 +45,12 @@ public class StudentService extends AbstractService<TbStudent> implements IStude
 	public List findAllTbStudent(int start, int pageSize, String name) {
 		return dao.findAllTbStudent(start, pageSize, name);
 	}
+	@Override
+	public boolean saveTbStudent(TbStudent tbStudent) {
+		return this.dao.saveTbStudent(tbStudent);
+	}
+	@Override
+	public TbStudent findAllTbStudentByUsername(String username) {
+		return this.dao.findAllTbStudentByUsername(username);
+	}
 }

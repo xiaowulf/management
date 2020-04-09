@@ -16,10 +16,10 @@ public class TbCourse implements java.io.Serializable{
 	 */
 	private static final long serialVersionUID = -5284027288950275460L;
 	private Long id;
-	private String coursename;
+	private String course_name;
 	private Long create_date;
-	private String coursecategoryname;
-	private Long coursecategoryid;
+	private String coursecategory_name;
+	private Long coursecategory_id;
 	private Integer status;
 	private Long update_date;
 	private String file1;
@@ -35,13 +35,7 @@ public class TbCourse implements java.io.Serializable{
 	public void setId(Long id) {
 		this.id = id;
 	}
-	@Column(name = "coursename")
-	public String getCoursename() {
-		return coursename;
-	}
-	public void setCoursename(String coursename) {
-		this.coursename = coursename;
-	}
+	
 	@Column(name = "create_date")
 	public Long getCreate_date() {
 		return create_date;
@@ -49,19 +43,26 @@ public class TbCourse implements java.io.Serializable{
 	public void setCreate_date(Long create_date) {
 		this.create_date = create_date;
 	}
-	@Column(name = "coursecategoryname")
-	public String getCoursecategoryname() {
-		return coursecategoryname;
+	@Column(name = "course_name")
+	public String getCourse_name() {
+		return course_name;
 	}
-	public void setCoursecategoryname(String coursecategoryname) {
-		this.coursecategoryname = coursecategoryname;
+	public void setCourse_name(String course_name) {
+		this.course_name = course_name;
 	}
-	@Column(name = "coursecategoryid")
-	public Long getCoursecategoryid() {
-		return coursecategoryid;
+	@Column(name = "coursecategory_name")
+	public String getCoursecategory_name() {
+		return coursecategory_name;
 	}
-	public void setCoursecategoryid(Long coursecategoryid) {
-		this.coursecategoryid = coursecategoryid;
+	public void setCoursecategory_name(String coursecategory_name) {
+		this.coursecategory_name = coursecategory_name;
+	}
+	@Column(name = "coursecategory_id")
+	public Long getCoursecategory_id() {
+		return coursecategory_id;
+	}
+	public void setCoursecategory_id(Long coursecategory_id) {
+		this.coursecategory_id = coursecategory_id;
 	}
 	@Column(name = "status")
 	public Integer getStatus() {

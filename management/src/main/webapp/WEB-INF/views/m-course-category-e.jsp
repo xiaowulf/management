@@ -40,7 +40,7 @@
 							style="border: 1px solid #4B306C; height: 30px;">
 							<input type="text" name="coursename"
 								style="height: 25px; width: 500px; margin-top: 2px;"
-								value='<c:out value="${tbCourseCategory.coursename}"/>'><span
+								value='<c:out value="${tbCourseCategory.category_name}"/>'><span
 								class="requireText">*</span>
 						</div>
 					</div>
@@ -54,7 +54,7 @@
 							style="border: 1px solid #4B306C; height: 30px;">
 							<input type="text" name="coursecode"
 								style="height: 25px; width: 500px; margin-top: 2px;"
-								value='<c:out value="${tbCourseCategory.coursecode}"/>'> <span
+								value='<c:out value="${tbCourseCategory.category_code}"/>'> <span
 								class="requireText">*</span>
 						</div>
 					</div>
@@ -87,7 +87,7 @@
 						<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"
 							style="border: 1px solid #4B306C; height: 260px;">
 							<label style="height: 25px; margin-top: 2px; text-align: right;"><spring:message
-									code="teacher.resume" /></label>
+									code="course.category.desc" /></label>
 						</div>
 						<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10"
 							style="border: 1px solid #4B306C; height: 260px;">
@@ -102,10 +102,12 @@
 							<button class="btn btn-success" type="submit">
 								<spring:message code="system.save" />
 							</button>
+							<!-- 
 							<button class="btn btn-success" type="button"
 								onclick="submitForm()">
 								<spring:message code="system.close" />
 							</button>
+							 -->
 							<button class="btn btn-warning" type="button"
 								onclick="submitForm()">
 								<spring:message code="system.reset.password" />

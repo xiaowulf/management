@@ -46,15 +46,24 @@
 					</div>
 					<div class="row">
 						<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"
-							style="border: 1px solid #4B306C; height: 100px;">
+							style="border: 1px solid #4B306C; height: 30px;">
 							<label style="height: 25px; margin-top: 2px; text-align: right;"><spring:message
-									code="course.file1" /></label>
+									code="course.category.name" /></label>
 						</div>
 						<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10"
-							style="border: 1px solid #4B306C; height: 100px; padding-top: 10px;">
-							<input type="file" name="image"> <a
-								href="./<c:out value="${tbCourse.file1}"/>" target="_blank"><spring:message
-									code="system.view" /></a> <span class="requireText">*</span>
+							style="border: 1px solid #4B306C; height: 30px;">
+							<select name="status" id="status_id">
+								<c:forEach  items="${dataList}" var="dataList"  varStatus="userStatus">
+									<c:if test="${dataList.id eq tbCourse.coursecategoryid}">
+										<option value="0" selected="selected"><c:out value="${dataList.category_name}"/></option>
+									</c:if>
+									<c:if test="${dataList.id ne tbCourse.coursecategoryid}">
+										<option value="0"><c:out value="${dataList.category_name}"/></option>
+									</c:if>
+								</c:forEach>
+							</select>
+							
+							<span class="requireText">*</span>
 						</div>
 					</div>
 					<div class="row">
@@ -100,21 +109,16 @@
 							<button class="btn btn-success" type="submit">
 								<spring:message code="system.save" />
 							</button>
+							<!-- 
 							<button class="btn btn-success" type="button"
 								onclick="submitForm()">
 								<spring:message code="system.close" />
 							</button>
-							<button class="btn btn-warning" type="button"
-								onclick="submitForm()">
-								<spring:message code="system.reset.password" />
-							</button>
+							 -->
 						</div>
 					</div>
 				</div>
 			</form>
-		</div>
-		<div title="<spring:message code="teacher.pic"/>" style="padding: 10px">
-			<img alt="" src="./<c:out value="${tbTeacher.pic1}"/>">
 		</div>
 	</div>
 	<!-- end row -->

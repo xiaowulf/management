@@ -119,8 +119,12 @@
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="border:1px solid #4B306C;height:50px;padding-top:5px;text-align:center;">
 				<input type="hidden" name="id" value="${tbStudent.id}">
 				<button class="btn btn-success" type="submit" ><spring:message code="system.save"/></button>
+				<!-- 
 				<button class="btn btn-success" type="button" onclick="submitForm()"><spring:message code="system.close"/></button>
-				<button class="btn btn-warning" type="button" onclick="submitForm()"><spring:message code="system.reset.password"/></button>
+				 -->
+				<button class="btn btn-warning" type="button" id="resetStudentPwd">
+					<spring:message code="system.reset.password"/>
+				</button>
 			</div>
 		</div>
 		<!-- end row -->

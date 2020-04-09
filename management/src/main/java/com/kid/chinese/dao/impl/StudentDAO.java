@@ -55,4 +55,33 @@ public class StudentDAO extends AbstractHibernateDAO<TbStudent> implements IStud
 		}
 		return null;
 	}
+
+
+	@Override
+	public boolean saveTbStudent(TbStudent tbStudent) {
+		boolean result = false;
+		try {
+			getCurrentSession().saveOrUpdate(tbStudent);
+			result = true;
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		return result;
+	}
+
+
+	@Override
+	public TbStudent findAllTbStudentByUsername(String username) {
+		try {
+			final String hql = "from TbStudent u where u.username  = :username  order by id desc";
+			Query query = getCurrentSession().createQuery(hql).setParameter("username", username);
+			List list = query.list();
+			if(list.size()>0) {
+				return (TbStudent)list.get(0);
+			}
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		return null;
+	}
 }

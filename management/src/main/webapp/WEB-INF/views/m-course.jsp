@@ -78,10 +78,10 @@
 				   	 			<tr style="background-color:#e0ecff;" onmouseover="style.backgroundColor='#f2f288'" onmouseout="style.backgroundColor='#e0ecff'" id='tableContent${dataList.id}'>
 				   	 		</c:if>
 				   	 			<td>
-				   	 				<c:out value="${dataList.coursename}"></c:out>
+				   	 				<c:out value="${dataList.course_name}"></c:out>
 					   	 		</td>
 				   	 			<td>
-				   	 				<c:out value="${dataList.coursecategoryname}"></c:out>
+				   	 				<c:out value="${dataList.coursecategory_name}"></c:out>
 					   	 		</td>
 					   	 		<td>
 					   	 			<c:out value="${dataList.create_date}"></c:out>

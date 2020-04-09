@@ -25,7 +25,38 @@ $(function() {
 						});
 					}
 				}
-			});
+	});
+	$('#resetTeacherPwd').click(function(){
+		$.ajax({
+			type: 'POST',
+			url: 'changeTeacherPwd.html',
+			data: {id:$('input[name=id]').val()},
+			dataType: 'json',
+			success: function(data){
+				if(data.resultStatus=="0"){
+					alert("修改成功！");
+				}else{
+					alert("修改失败！");
+				}
+			}
+		});
+	});
+	$('#resetStudentPwd').click(function(){
+		$.ajax({
+			type: 'POST',
+			url: 'changeStudentPwd.html',
+			data: {id:$('input[name=id]').val()},
+			dataType: 'json',
+			success: function(data){
+				if(data.resultStatus=="0"){
+					alert("修改成功！");
+				}else{
+					alert("修改失败！");
+				}
+			}
+		});
+	});
+	
 });
 
 function addTab(title, href) {

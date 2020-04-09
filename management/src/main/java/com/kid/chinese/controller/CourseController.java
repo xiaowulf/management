@@ -241,6 +241,8 @@ public class CourseController {
 		try {
 			Long id = Long.parseLong(request.getParameter("id"));
 			TbCourse tbCourse = courseService.findOne(id);
+			List tbCourseCategoryList = courseCategoryService.findAll();
+			model.addAttribute("dataList", tbCourseCategoryList);
 			model.addAttribute("tbCourse", tbCourse);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -259,7 +261,7 @@ public class CourseController {
 			if (tbCourseCategoryTemp.getId() != null && tbCourseCategoryTemp.getId().longValue() != 0L) {
 				Long id = Long.parseLong(request.getParameter("id"));
 				tbCourseCategory = courseCategoryService.findOne(id);
-				TbCourseCategory tbCourseCategoryTemp2 = courseCategoryService.findAllTbCourseCategoryByCode(tbCourseCategoryTemp.getCoursecode());
+				TbCourseCategory tbCourseCategoryTemp2 = courseCategoryService.findAllTbCourseCategoryByCode(tbCourseCategoryTemp.getCategory_code());
 				if (tbCourseCategoryTemp2 != null && tbCourseCategoryTemp2.getId().longValue() != id.longValue()) {
 					request.setAttribute("result", "course.category.exist");
 					return "result";
@@ -268,8 +270,8 @@ public class CourseController {
 				tbCourseCategory = new TbCourseCategory();
 				tbCourseCategory.setCreate_date(DateUtil.getLongDate(Calendar.getInstance()));
 			}
-			tbCourseCategory.setCoursecode(tbCourseCategoryTemp.getCoursecode());
-			tbCourseCategory.setCoursename(tbCourseCategoryTemp.getCoursename());
+			tbCourseCategory.setCategory_code(tbCourseCategoryTemp.getCategory_code());
+			tbCourseCategory.setCategory_name(tbCourseCategoryTemp.getCategory_name());
 			tbCourseCategory.setDescription(tbCourseCategoryTemp.getDescription());
 			tbCourseCategory.setStatus(tbCourseCategoryTemp.getStatus());
 			tbCourseCategory.setUpdate_date(DateUtil.getLongDate(Calendar.getInstance()));

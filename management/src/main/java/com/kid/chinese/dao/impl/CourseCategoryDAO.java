@@ -24,7 +24,7 @@ public class CourseCategoryDAO extends AbstractHibernateDAO<TbCourseCategory> im
 	@Override
 	public Long findAllTbCourseCategoryCount(String name) {
 		try {
-			String hql = "select count(*) from TbCourseCategory u where u.coursename is null or u.coursename like :name";
+			String hql = "select count(*) from TbCourseCategory u where u.category_name is null or u.category_name like :name";
 			Long userCount = (Long) getCurrentSession()
 					.createQuery(hql)
 					.setParameter("name", "%"+name+"%")
@@ -39,7 +39,7 @@ public class CourseCategoryDAO extends AbstractHibernateDAO<TbCourseCategory> im
 	@Override
 	public List findAllTbCourseCategory(int start, int pageSize, String name) {
 		try {
-			final String hql = "from TbCourseCategory u where u.coursename is null or u.coursename like :name  order by id desc";
+			final String hql = "from TbCourseCategory u where u.category_name is null or u.category_name like :name  order by id desc";
 			
 			Query query = getCurrentSession().createQuery(hql).setParameter("name", "%"+name+"%");
 			//3.分页
@@ -69,9 +69,9 @@ public class CourseCategoryDAO extends AbstractHibernateDAO<TbCourseCategory> im
 	@Override
 	public TbCourseCategory findAllTbCourseCategoryByCode(String code) {
 		try {
-			final String hql = "from TbCourseCategory u where u.coursecode  = :coursecode  order by id desc";
+			final String hql = "from TbCourseCategory u where u.category_code  = :category_code  order by id desc";
 			
-			Query query = getCurrentSession().createQuery(hql).setParameter("coursecode", code);
+			Query query = getCurrentSession().createQuery(hql).setParameter("category_code", code);
 			List list = query.list();
 			if(list.size()>0) {
 				return (TbCourseCategory)list.get(0);

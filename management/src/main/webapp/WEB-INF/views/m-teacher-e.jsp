@@ -209,12 +209,13 @@
 							<button class="btn btn-success" type="submit">
 								<spring:message code="system.save" />
 							</button>
+							<!-- 
 							<button class="btn btn-success" type="button"
 								onclick="submitForm()">
 								<spring:message code="system.close" />
 							</button>
-							<button class="btn btn-warning" type="button"
-								onclick="submitForm()">
+							-->
+							<button class="btn btn-warning" type="button" id="resetTeacherPwd">
 								<spring:message code="system.reset.password" />
 							</button>
 						</div>

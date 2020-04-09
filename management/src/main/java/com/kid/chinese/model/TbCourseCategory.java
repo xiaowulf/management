@@ -17,11 +17,11 @@ public class TbCourseCategory implements java.io.Serializable{
 	 */
 	private static final long serialVersionUID = 2416641545438055479L;
 	private Long id;
-	private String coursename;
+	private String category_name;
 	private String description;
 	private Integer status=0;
 	private Long create_date;
-	private String coursecode;
+	private String category_code;
 	private Long update_date;
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
@@ -31,13 +31,6 @@ public class TbCourseCategory implements java.io.Serializable{
 	}
 	public void setId(Long id) {
 		this.id = id;
-	}
-	@Column(name = "coursename")
-	public String getCoursename() {
-		return coursename;
-	}
-	public void setCoursename(String coursename) {
-		this.coursename = coursename;
 	}
 	@Column(name = "description")
 	public String getDescription() {
@@ -60,13 +53,6 @@ public class TbCourseCategory implements java.io.Serializable{
 	public void setCreate_date(Long create_date) {
 		this.create_date = create_date;
 	}
-	@Column(name = "coursecode")
-	public String getCoursecode() {
-		return coursecode;
-	}
-	public void setCoursecode(String coursecode) {
-		this.coursecode = coursecode;
-	}
 	@Column(name = "update_date")
 	public Long getUpdate_date() {
 		return update_date;
@@ -74,5 +60,18 @@ public class TbCourseCategory implements java.io.Serializable{
 	public void setUpdate_date(Long update_date) {
 		this.update_date = update_date;
 	}
-	
+	@Column(name = "category_name")
+	public String getCategory_name() {
+		return category_name;
+	}
+	public void setCategory_name(String category_name) {
+		this.category_name = category_name;
+	}
+	@Column(name = "category_code")
+	public String getCategory_code() {
+		return category_code;
+	}
+	public void setCategory_code(String category_code) {
+		this.category_code = category_code;
+	}
 }

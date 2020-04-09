@@ -25,7 +25,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.google.gson.Gson;
+import com.kid.chinese.model.ChangePwdForm;
 import com.kid.chinese.model.LoginCommand;
+import com.kid.chinese.model.RtnResultVO;
 import com.kid.chinese.model.TbEmployee;
 import com.kid.chinese.model.TbTeacher;
 import com.kid.chinese.service.IEmployeeService;
@@ -34,6 +36,7 @@ import com.kid.chinese.service.ITeacherService;
 import com.kid.chinese.util.CodeUtil;
 import com.kid.chinese.util.Constants;
 import com.kid.chinese.util.MD5;
+import com.kid.chinese.util.MailUtil;
 import com.kid.chinese.util.MathUtil;
 import com.kid.chinese.util.Page;
 import com.kid.chinese.util.PagerHelp;
@@ -170,6 +173,7 @@ public class TeacherController {
 				}
 			} else {
 				tbTeacher = new TbTeacher();
+				tbTeacher.setPassword(MD5.getMD5Str(MD5.getRandomString(6)));
 			}
 			if (image != null) {
 				String fileName = image.getOriginalFilename();
@@ -185,7 +189,6 @@ public class TeacherController {
 					image.transferTo(new File(fileupload + millSeconds + fileName));
 				}
 			}
-
 			tbTeacher.setUsername(tbTeacherTemp.getUsername());
 			tbTeacher.setTruename(tbTeacherTemp.getTruename());
 			tbTeacher.setCertificate(tbTeacherTemp.getCertificate());
@@ -194,7 +197,6 @@ public class TeacherController {
 			tbTeacher.setEducation(tbTeacherTemp.getEducation());
 			tbTeacher.setMobile(tbTeacherTemp.getMobile());
 			tbTeacher.setResume(tbTeacherTemp.getResume());
-			tbTeacher.setPassword(MD5.getMD5Str(MD5.getRandomString(6)));
 			tbTeacher.setSex(tbTeacherTemp.getSex());
 			tbTeacher.setBirthday(tbTeacherTemp.getBirthday());
 			tbTeacher.setStatus(tbTeacherTemp.getStatus());
@@ -209,6 +211,25 @@ public class TeacherController {
 		}
 		return "result";
 	}
+	@RequestMapping(value = "/changeTeacherPwd.html", produces = "text/html;charset=UTF-8")
+	@ResponseBody
+	public String changeTeacherPwd(HttpServletRequest request, ModelMap model, TbTeacher tbTeacherTemp) {
+		RtnResultVO rtnResultVO = new RtnResultVO();
+		if(null!=tbTeacherTemp&&tbTeacherTemp.getId()!=null) {
+			TbTeacher tbTeacher = teacherService.findOne(tbTeacherTemp.getId());
+			String pwd = MailUtil.getNumber();
+			tbTeacher.setPassword(MD5.getMD5Str(pwd));
+			MailUtil mailUtil = new MailUtil();
+			mailUtil.sendEmil(tbTeacher.getEmail(), "修改密码成功", pwd);
+			teacherService.saveTbTeacher(tbTeacher);
+		}
+		Gson gson = new Gson();
+		rtnResultVO.setResultStatus("0");
+		String json = gson.toJson(rtnResultVO);
+		return json;
+	}
+	
+	
 
 	@Resource(name = "teacherService")
 	private ITeacherService teacherService;
